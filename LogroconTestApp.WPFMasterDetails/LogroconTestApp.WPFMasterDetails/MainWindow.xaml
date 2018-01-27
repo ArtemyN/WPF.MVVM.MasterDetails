@@ -1,0 +1,32 @@
+﻿<Window x:Class="LogroconTestApp.WPFMasterDetails.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:view="clr-namespace:LogroconTestApp.WPFMasterDetails.View"
+        xmlns:vm="clr-namespace:LogroconTestApp.WPFMasterDetails.ViewModel"
+        Title="MyFirstMasterDetails" Height="500" Width="500">
+
+    <Window.Resources>
+        <DataTemplate x:Key="CitiesListTemplate" >
+            <view:CitiesListView/>
+        </DataTemplate>
+        <DataTemplate x:Key="StreetsListTemplate" >
+            <view:StreetsListView/>
+        </DataTemplate>
+    </Window.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+
+        <ContentControl Content="{Binding}" ContentTemplate="{StaticResource CitiesListTemplate}" Grid.Column="1" Grid.Row="0" />
+
+        <ContentControl Content="{Binding SelectedCity}" ContentTemplate="{StaticResource StreetsListTemplate}" Grid.Column="1" Grid.Row="1" />
+
+    </Grid>
+</Window>

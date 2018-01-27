@@ -1,0 +1,10 @@
+C:\Users\Art\source\repos\LogroconTestApp.WPFMasterDetails\DomainModel\bin\Debug\DomainModel.dll
+C:\Users\Art\source\repos\LogroconTestApp.WPFMasterDetails\DomainModel\bin\Debug\DomainModel.pdb
+C:\Users\Art\source\repos\LogroconTestApp.WPFMasterDetails\DomainModel\obj\Debug\DomainModel.csproj.CoreCompileInputs.cache
+C:\Users\Art\source\repos\LogroconTestApp.WPFMasterDetails\DomainModel\obj\Debug\DomainModel.dll
+C:\Users\Art\source\repos\LogroconTestApp.WPFMasterDetails\DomainModel\obj\Debug\DomainModel.pdb
+C:\Users\Art\source\repos\LogroconTestApp.WPFMasterDetails\DomainModel\bin\Debug\DomainModel.dll.config
+C:\Users\Art\source\repos\LogroconTestApp.WPFMasterDetails\DomainModel\bin\Debug\EntityFramework.dll
+C:\Users\Art\source\repos\LogroconTestApp.WPFMasterDetails\DomainModel\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Art\source\repos\LogroconTestApp.WPFMasterDetails\DomainModel\bin\Debug\EntityFramework.xml
+C:\Users\Art\source\repos\LogroconTestApp.WPFMasterDetails\DomainModel\bin\Debug\EntityFramework.SqlServer.xml

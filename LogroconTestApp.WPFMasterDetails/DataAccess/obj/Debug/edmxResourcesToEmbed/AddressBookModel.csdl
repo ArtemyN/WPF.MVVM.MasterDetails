@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TheAddressBookModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="TheAddressBookEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Cities" EntityType="TheAddressBookModel.Cities" />
+    <EntitySet Name="Streets" EntityType="TheAddressBookModel.Streets" />
+    <AssociationSet Name="FK__Streets__CityNum__3F466844" Association="TheAddressBookModel.FK__Streets__CityNum__3F466844">
+      <End Role="Cities" EntitySet="Cities" />
+      <End Role="Streets" EntitySet="Streets" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Cities">
+    <Key>
+      <PropertyRef Name="Number" />
+    </Key>
+    <Property Name="Number" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Region" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IsRegionCenter" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Streets" Relationship="TheAddressBookModel.FK__Streets__CityNum__3F466844" FromRole="Cities" ToRole="Streets" />
+  </EntityType>
+  <EntityType Name="Streets">
+    <Key>
+      <PropertyRef Name="Number" />
+    </Key>
+    <Property Name="Number" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CityNumber" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Cities" Relationship="TheAddressBookModel.FK__Streets__CityNum__3F466844" FromRole="Streets" ToRole="Cities" />
+  </EntityType>
+  <Association Name="FK__Streets__CityNum__3F466844">
+    <End Type="TheAddressBookModel.Cities" Role="Cities" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="TheAddressBookModel.Streets" Role="Streets" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cities">
+        <PropertyRef Name="Number" />
+      </Principal>
+      <Dependent Role="Streets">
+        <PropertyRef Name="CityNumber" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

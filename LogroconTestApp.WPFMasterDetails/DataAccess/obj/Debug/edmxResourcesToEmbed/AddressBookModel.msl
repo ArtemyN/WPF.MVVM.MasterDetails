@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TheAddressBookModelStoreContainer" CdmEntityContainer="TheAddressBookEntities">
+    <EntitySetMapping Name="Cities">
+      <EntityTypeMapping TypeName="TheAddressBookModel.Cities">
+        <MappingFragment StoreEntitySet="Cities">
+          <ScalarProperty Name="IsRegionCenter" ColumnName="IsRegionCenter" />
+          <ScalarProperty Name="Region" ColumnName="Region" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Streets">
+      <EntityTypeMapping TypeName="TheAddressBookModel.Streets">
+        <MappingFragment StoreEntitySet="Streets">
+          <ScalarProperty Name="CityNumber" ColumnName="CityNumber" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
